@@ -12,6 +12,12 @@ namespace Logical_Programs
         {
             Console.WriteLine("************Welcome to Logical Problems***************");
 
+            //********************Day - 4 Assignments**********************
+
+            Console.WriteLine("First Use Case for Fibonacci Series");
+
+            Fibonacci_Series.Fibonacciseriesproblem();
+
             Console.ReadLine();
         }
     }
