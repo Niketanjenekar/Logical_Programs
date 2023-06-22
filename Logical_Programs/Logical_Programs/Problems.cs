@@ -11,36 +11,24 @@ namespace Logical_Programs
     {
         public static void Problem_Program()
         {
-            int num, sum =0 ;
-
-            Console.WriteLine("Find the Number is Prime Number Or Not");
+            int num, reverse = 0, remainder;
             
+            Console.WriteLine("Please Enter the Number whch you want to reverse : ");
+
             num = Convert.ToInt32(Console.ReadLine());
 
-            bool Prime_Number = Prime_Nmb(num);
-            if (Prime_Number)
+            while (num != 0)
             {
-                Console.WriteLine("The Number you provided is the Prime Number");
+                remainder = num % 10;
+
+                reverse = reverse * 10 + remainder;
+
+                num = num / 10;
+
             }
-            else
-            {
-                Console.WriteLine("The Number you provided is Not the Prime Number");
-            }
+            Console.WriteLine("Reversed Number : " + reverse + " ");
         }
-        public static bool Prime_Nmb(int num)
-        {
-            if (num < 1) 
-            {
-                return false;
-            }
-            for (int i = 2; i <= Math.Sqrt(num); i++)
-            {
-                if (num % i == 0)
-                {
-                    return false ;
-                }
-            }   
-            return true;
-        }
+        
+        
     }
 }
