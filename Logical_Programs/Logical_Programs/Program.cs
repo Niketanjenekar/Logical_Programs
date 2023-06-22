@@ -14,9 +14,9 @@ namespace Logical_Programs
 
             //********************Day - 4 Assignments**********************
 
-            Console.WriteLine("First Use Case for Fibonacci Series");
+            Console.WriteLine("Second Problem For Perfect Number");
 
-            Fibonacci_Series.Fibonacciseriesproblem();
+            Problems.Problem_Program();
 
             Console.ReadLine();
         }
