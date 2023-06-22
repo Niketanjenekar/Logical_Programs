@@ -14,7 +14,7 @@ namespace Logical_Programs
 
             //********************Day - 4 Assignments**********************
 
-            Console.WriteLine("Second Problem For Perfect Number");
+            Console.WriteLine("Third Problem For Prime Number");
 
             Problems.Problem_Program();
 

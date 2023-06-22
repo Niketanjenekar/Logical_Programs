@@ -13,32 +13,34 @@ namespace Logical_Programs
         {
             int num, sum =0 ;
 
-            Console.WriteLine("Find the Number is Pefect Number Or Not");
+            Console.WriteLine("Find the Number is Prime Number Or Not");
             
             num = Convert.ToInt32(Console.ReadLine());
 
-            bool Perfect_Number = Perfect_Nmb(num);
-            if (Perfect_Number)
+            bool Prime_Number = Prime_Nmb(num);
+            if (Prime_Number)
             {
-                Console.WriteLine("The Number you provided is the Perfect Number");
+                Console.WriteLine("The Number you provided is the Prime Number");
             }
             else
             {
-                Console.WriteLine("The Number you provided is Not the Perfect Number");
+                Console.WriteLine("The Number you provided is Not the Prime Number");
             }
         }
-        public static bool Perfect_Nmb(int num)
+        public static bool Prime_Nmb(int num)
         {
-            int sum = 0 ;
-
-            for (int i = 1; i < num; i++)
+            if (num < 1) 
+            {
+                return false;
+            }
+            for (int i = 2; i <= Math.Sqrt(num); i++)
             {
                 if (num % i == 0)
                 {
-                    sum += i ;
+                    return false ;
                 }
             }   
-            return sum == num;
+            return true;
         }
     }
 }
