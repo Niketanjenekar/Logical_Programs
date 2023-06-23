@@ -14,7 +14,7 @@ namespace Logical_Programs
 
             //********************Day - 4 Assignments**********************
 
-            Console.WriteLine("Third Problem For Prime Number");
+            Console.WriteLine("Fifth Problem for Finding Coupon Numbers");
 
             Problems.Problem_Program();
 

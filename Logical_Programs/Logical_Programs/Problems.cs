@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,24 +12,31 @@ namespace Logical_Programs
     {
         public static void Problem_Program()
         {
-            int num, reverse = 0, remainder;
-            
-            Console.WriteLine("Please Enter the Number whch you want to reverse : ");
+            Console.WriteLine("Please Enter the Number of Distinct Coupon Numbers: ");
 
-            num = Convert.ToInt32(Console.ReadLine());
+            int num = Convert.ToInt32(Console.ReadLine());
 
-            while (num != 0)
-            {
-                remainder = num % 10;
+            int coupon_number = GetCouponNumber(num);
 
-                reverse = reverse * 10 + remainder;
+            Console.WriteLine("The Random Coupon Number is : "+  coupon_number);
 
-                num = num / 10;
-
-            }
-            Console.WriteLine("Reversed Number : " + reverse + " ");
         }
-        
+        public static int GetCouponNumber(int num)
+        {
+            Random random = new Random();
+
+            HashSet<int> numbers = new HashSet<int>();
+            
+            int RandomNumbers = 0;
+            
+            while(numbers.Count < num)
+            {
+                int random_coupon = random.Next(1, num +1);
+                RandomNumbers++;
+                numbers.Add(random_coupon);
+            }
+            return RandomNumbers;
+        }
         
     }
 }
