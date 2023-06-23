@@ -14,7 +14,7 @@ namespace Logical_Programs
 
             //********************Day - 4 Assignments**********************
 
-            Console.WriteLine("Fifth Problem for Finding Coupon Numbers");
+            Console.WriteLine("Sixth Problem for Simulate StopWatch");
 
             Problems.Problem_Program();
 
